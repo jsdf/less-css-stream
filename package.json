@@ -1,27 +1,27 @@
 {
-  "name": "sass-css-stream",
+  "name": "less-css-stream",
   "version": "0.1.1",
-  "description": "sass to css transform",
+  "description": "less to css transform",
   "main": "index.js",
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/rotundasoftware/sass-css-stream.git"
+    "url": "https://github.com/jsdf/less-css-stream.git"
   },
   "keywords": [
     "cartero",
     "parcelify",
-    "sass",
+    "less",
     "css"
   ],
-  "author": "",
+  "author": "James Friend",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rotundasoftware/sass-css-stream/issues"
+    "url": "https://github.com/jsdf/less-css-stream/issues"
   },
-  "homepage": "https://github.com/rotundasoftware/sass-css-stream",
+  "homepage": "https://github.com/jsdf/less-css-stream",
   "dependencies": {
-    "node-sass": "~0.8.1",
-    "through": "~2.3.4"
+    "through": "~2.3.4",
+    "less": "^1.7.0"
   }
 }

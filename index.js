@@ -11,7 +11,7 @@ module.exports = function(filepath, opts) {
 
 	var data = "";
 
-	if(file !== undefined && path.extname(file) !== ".less") return through();
+	if(filepath !== undefined && path.extname(filepath) !== ".less") return through();
 	else return through(write, end);
 
 	function write(buf) {

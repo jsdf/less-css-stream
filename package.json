@@ -22,6 +22,7 @@
   "homepage": "https://github.com/jsdf/less-css-stream",
   "dependencies": {
     "through": "~2.3.4",
-    "less": "^1.7.0"
+    "less": "^1.7.0",
+    "underscore": "^1.6.0"
   }
 }

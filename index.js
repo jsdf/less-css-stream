@@ -34,9 +34,8 @@ module.exports = function(filepath, opts) {
       } else {
       	self.queue(css);
       }
-    	self.queue('null')
+    	self.queue(null)
     });
 	}
 };
-
 

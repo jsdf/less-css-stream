@@ -1,29 +1,29 @@
-sass-css-stream
+less-css-stream
 ===============
 
-A sass to css stream wrapper around [node-sass](https://github.com/andrew/node-sass).
+A less to css stream wrapper around [less](https://github.com/less/less.js).
 
-Takes a file argument and an optional opts argument that is passed through to node-sass. Returns a [through stream](https://github.com/dominictarr/through) that has sass contents written in and outputs the compiled css.
+Takes a file argument and an optional opts argument that is [passed through to less](http://lesscss.org/#using-less-configuration). Returns a [through stream](https://github.com/dominictarr/through) that has less contents written in and outputs the compiled css.
 
 Can be as a [parcelify](https://github.com/rotundasoftware/parcelify) or [cartero](https://github.com/rotundasoftware/cartero) transform.
 
 #example
 ```javascript
-var sassCssStream = require( '../' );
-var fs = require( 'fs' );
-var path = require( 'path' );
+var lessCssStream = require('less-css-stream');
+var fs = require('fs');
+var path = require('path');
 
-var inputFile = path.join( __dirname, "sampleStyle.scss" );
+var inputFile = path.join(__dirname, "sampleStyle.less");
 
-var opts = { includePaths : [ path.resolve( __dirname, 'bourbon' ) ] };
+var opts = { paths : ['./vendor/bootstrap'], compress: true };
 
-fs.createReadStream( inputFile ).pipe( sassCssStream( inputFile, opts ) ).pipe( process.stdout );
+fs.createReadStream(inputFile).pipe(lessCssStream(inputFile, opts)).pipe(process.stdout);
 ```
 
 #usage
 
-### sassCssStream( file [, opts ] )
+### lessCssStream(file [, opts ])
 
-`file` - the sass file being 
+`file` - the less file being
 
-`opts` - optional options hash passed through to `node-sass.renderSync`
+`opts` - optional [options hash](http://lesscss.org/#using-less-configuration) passed through to `less.render`

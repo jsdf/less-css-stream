@@ -22,7 +22,7 @@ fs.createReadStream(inputFile).pipe(lessCssStream(inputFile, opts)).pipe(process
 
 #usage
 
-### lessCssStream(file [, opts ])
+### lessCssStream(file[, opts])
 
 `file` - the less file being
 

@@ -4,17 +4,17 @@ var path = require('path');
 var extend = require('extend-object');
 
 module.exports = function(file, opts) {
+    var data = '',
     config = extend({
       compress: false,
       paths: []
     }, opts);
 
-    var data = '';
-    if (file !== undefined && path.extname(file) !== '.less') {
+    if (!/\.css$|\.less$/.test(file)) {
         return through();
-    } else {
-        return through(write, end);
     }
+
+    return through(write, end);
 
     function write(buf) {
         data += buf;
@@ -27,16 +27,28 @@ module.exports = function(file, opts) {
         // Injects the path of the current file.
         fileConfig.filename = file;
 
-        less.render(data, fileConfig, function (err, css) {
+        less.render(data, fileConfig, function (err, output) {
             if (err) {
-                // TODO: add a better error message
-                err.message = err.message + ' in file ' + err.filename + ' line no. ' + err.line;
-                self.emit('error', new Error(err));
+                self.emit('error', new Error(getErrorMessage(err), file, err.line));
             } else {
-                self.queue(css);
+                self.queue(output.css);
             }
-            self.queue(null)
+            self.queue(null);
         });
     }
-};
 
+    function getErrorMessage(err) {
+        var msg = err.message;
+		if (err.line) {
+			msg += ", line " + err.line;
+		}
+		if (err.column) {
+			msg += ", column " + err.column;
+		}
+		if (err.extract) {
+			msg += ": \"" + err.extract + "\"";
+		}
+
+		return msg;
+    }
+};

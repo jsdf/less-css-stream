@@ -3,7 +3,9 @@
   "version": "0.1.2",
   "description": "less to css transform",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "node test/test.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/jsdf/less-css-stream.git"
@@ -22,7 +24,7 @@
   "homepage": "https://github.com/jsdf/less-css-stream",
   "dependencies": {
     "through": "~2.3.7",
-    "less": "^1.7.0",
+    "less": "2.x",
     "extend-object": "~1.0.0"
   }
 }

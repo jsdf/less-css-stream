@@ -14,15 +14,15 @@
     "less",
     "css"
   ],
-  "author": "James Friend",
+  "author": "James Friend, Michael Klein",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jsdf/less-css-stream/issues"
   },
   "homepage": "https://github.com/jsdf/less-css-stream",
   "dependencies": {
-    "through": "~2.3.4",
+    "through": "~2.3.7",
     "less": "^1.7.0",
-    "underscore": "^1.6.0"
+    "extend-object": "~1.0.0"
   }
 }

@@ -4,7 +4,7 @@
   "description": "less to css transform",
   "main": "index.js",
   "scripts": {
-    "test": "node test/test.js"
+    "test": "tap test"
   },
   "repository": {
     "type": "git",
@@ -35,5 +35,9 @@
     "through": "~2.3.7",
     "less": "2.x",
     "extend-object": "~1.0.0"
+  },
+  "devDependencies": {
+    "concat-stream": "^1.4.8",
+    "tap": "^0.7.1"
   }
 }

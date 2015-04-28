@@ -16,7 +16,16 @@
     "less",
     "css"
   ],
-  "author": "James Friend, Michael Klein",
+  "author": "James Friend",
+  "contributors": [
+    {
+      "name": "James Friend",
+      "email": "james@jsdf.co"
+    },
+    {
+      "name": "Michael Klein"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jsdf/less-css-stream/issues"

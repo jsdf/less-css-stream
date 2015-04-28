@@ -1,9 +1,11 @@
 {
   "name": "less-css-stream",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "less to css transform",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "node test/test.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/jsdf/less-css-stream.git"
@@ -14,15 +16,15 @@
     "less",
     "css"
   ],
-  "author": "James Friend",
+  "author": "James Friend, Michael Klein",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jsdf/less-css-stream/issues"
   },
   "homepage": "https://github.com/jsdf/less-css-stream",
   "dependencies": {
-    "through": "~2.3.4",
-    "less": "^1.7.0",
-    "underscore": "^1.6.0"
+    "through": "~2.3.7",
+    "less": "2.x",
+    "extend-object": "~1.0.0"
   }
 }

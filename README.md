@@ -5,7 +5,7 @@ A less to css stream wrapper around [less](https://github.com/less/less.js).
 
 Takes a file argument and an optional opts argument that is [passed through to less](http://lesscss.org/#using-less-configuration). Returns a [through stream](https://github.com/dominictarr/through) that has less contents written in and outputs the compiled css.
 
-Can be used as a [parcelify](https://github.com/rotundasoftware/parcelify) or [cartero](https://github.com/rotundasoftware/cartero) transform.
+Can be used as a transform for [parcelify](https://github.com/rotundasoftware/parcelify), [cartero](https://github.com/rotundasoftware/cartero) or [browserify-assets](https://github.com/jsdf/browserify-assets).
 
 #example
 ```javascript

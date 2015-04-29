@@ -7,7 +7,7 @@ Takes a file argument and an optional opts argument that is [passed through to l
 
 Can be used as a transform for [parcelify](https://github.com/rotundasoftware/parcelify), [cartero](https://github.com/rotundasoftware/cartero) or [browserify-assets](https://github.com/jsdf/browserify-assets).
 
-#example
+# example
 ```javascript
 var lessCssStream = require('less-css-stream');
 var fs = require('fs');
@@ -20,10 +20,15 @@ var opts = { paths : ['./vendor/bootstrap'], compress: true };
 fs.createReadStream(inputFile).pipe(lessCssStream(inputFile, opts)).pipe(process.stdout);
 ```
 
-#usage
+# usage
 
 ### lessCssStream(file[, opts])
 
 `file` - the less file to transform
 
 `opts` - optional [options hash](http://lesscss.org/#using-less-configuration) passed through to `less.render`
+
+
+# changelog
+
+- **1.0.0** - updated included/dependent Less version to 2.x

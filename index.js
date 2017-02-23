@@ -10,7 +10,7 @@ module.exports = function(file, opts) {
     paths: []
   }, opts);
 
-  if (!/\.css$|\.less$/.test(file)) {
+  if (!/\.less$/.test(file)) {
     return through();
   }
 

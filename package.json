@@ -1,6 +1,6 @@
 {
   "name": "less-css-stream",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "less to css transform",
   "main": "index.js",
   "scripts": {

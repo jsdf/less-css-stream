@@ -31,13 +31,16 @@
     "url": "https://github.com/jsdf/less-css-stream/issues"
   },
   "homepage": "https://github.com/jsdf/less-css-stream",
+  "peerDependencies": {
+    "less": ">=1.0.0"
+  },
   "dependencies": {
-    "through": "~2.3.7",
-    "less": "2.x",
-    "extend-object": "~1.0.0"
+    "extend-object": "~1.0.0",
+    "through": "~2.3.7"
   },
   "devDependencies": {
     "concat-stream": "^1.4.8",
-    "tap": "^0.7.1"
+    "less": "^3.10.3",
+    "tap": "^14.7.2"
   }
 }
